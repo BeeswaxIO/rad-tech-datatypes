@@ -23,7 +23,7 @@ import com.metamx.datatypes.openrtb.Ext;
 import org.joda.time.DateTime;
 import org.joda.time.DateTimeZone;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class MmxClick
 {
   private final String timestamp;

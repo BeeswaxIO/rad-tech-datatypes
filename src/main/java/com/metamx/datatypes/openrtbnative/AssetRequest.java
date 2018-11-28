@@ -22,7 +22,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.metamx.datatypes.openrtb.Ext;
 import com.metamx.datatypes.openrtb.Video;
 
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class AssetRequest
 {
   private final Integer id;
