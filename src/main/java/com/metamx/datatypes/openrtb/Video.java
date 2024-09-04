@@ -46,6 +46,7 @@ public class Video
   private final List<Banner> companionAd;
   private final List<Integer> api;
   private final List<Integer> companionType;
+  private final Integer placement;
   private final Ext ext;
 
   public Video(
@@ -70,6 +71,7 @@ public class Video
       @JsonProperty("companionad") List<Banner> companionAd,
       @JsonProperty("api") List<Integer> api,
       @JsonProperty("companiontype") List<Integer> companionType,
+      @JsonProperty("placement") Integer placement,
       @JsonProperty("ext") Ext ext
   )
   {
@@ -94,6 +96,7 @@ public class Video
     this.companionAd = companionAd;
     this.api = api;
     this.companionType = companionType;
+    this.placement = placement;
     this.ext = ext;
   }
 
@@ -216,6 +219,12 @@ public class Video
     return api;
   }
 
+  @JsonProperty("placement")
+  public Integer getPlacement()
+  {
+    return placement;
+  }
+
   @JsonProperty("companionType")
   public List<Integer> getCompanionType()
   {
@@ -256,6 +265,7 @@ public class Video
     private List<Banner> companionAd;
     private List<Integer> api;
     private List<Integer> companionType;
+    private Integer placement;
     private Ext ext;
 
     public Builder() {}
@@ -386,6 +396,12 @@ public class Video
       return this;
     }
 
+    public Builder placement(final Integer placement)
+    {
+      this.placement = placement;
+      return this;
+    }
+
     public Builder ext(final Ext ext)
     {
       this.ext = ext;
@@ -416,6 +432,7 @@ public class Video
           companionAd,
           api,
           companionType,
+          placement,
           ext
       );
     }

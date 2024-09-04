@@ -37,6 +37,7 @@ public class Imp
   private final Integer secure;
   private final List<String> iframeBuster;
   private final Pmp pmp;
+  private final Integer ssai;
   private final Ext ext;
 
   public Imp(
@@ -53,6 +54,7 @@ public class Imp
       @JsonProperty("secure") Integer secure,
       @JsonProperty("iframebuster") List<String> iframeBuster,
       @JsonProperty("pmp") Pmp pmp,
+      @JsonProperty("ssai") Integer ssai,
       @JsonProperty("ext") Ext ext
   )
   {
@@ -69,6 +71,7 @@ public class Imp
     this.secure = secure;
     this.iframeBuster = iframeBuster;
     this.pmp = pmp;
+    this.ssai = ssai;
     this.ext = ext;
   }
 
@@ -150,6 +153,12 @@ public class Imp
     return pmp;
   }
 
+  @JsonProperty("ssai")
+  public Integer getSsai()
+  {
+      return ssai;
+  }
+
   @JsonProperty
   public Ext getExt()
   {
@@ -176,6 +185,7 @@ public class Imp
     private Integer secure;
     private List<String> iframebuster;
     private Pmp pmp;
+    private Integer ssai;
     private Ext ext;
 
     public Builder() {}
@@ -257,6 +267,12 @@ public class Imp
       return this;
     }
 
+    public Builder ssai(final Integer ssai)
+    {
+        this.ssai = ssai;
+        return this;
+    }
+
     public Builder ext(final Ext ext)
     {
       this.ext = ext;
@@ -279,6 +295,7 @@ public class Imp
           secure,
           iframebuster,
           pmp,
+          ssai,
           ext
       );
     }
