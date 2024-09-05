@@ -220,7 +220,7 @@ public class Video
   }
 
   @JsonProperty("placement")
-  public Integer getPlacement()
+  public Integer getVideoPlacementType()
   {
     return placement;
   }
